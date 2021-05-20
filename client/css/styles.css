@@ -1,0 +1,269 @@
+:root{
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+    --primary: #0099FF;
+    --warning: #FF9100;
+    --danger: #ff0000;
+    --info: #CCCCCC;
+    --selectedPrimary: #7ACAFF;
+    --componentBgrd: #EBEBEB;
+}
+
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+input[type=text], input[type=password], input[type=time] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--componentBgrd);
+}
+
+#login-input{
+    margin: 15px 0;
+}
+
+.btn{
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 15px 25px 15px 25px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+.btn-info {
+    background-color: var(--info);
+    color: #3D3D3D;
+
+}
+
+.danger {
+    color: var(--danger) !important;
+}
+
+.incorrectBorder {
+    border: 2px solid var(--danger) !important;
+}
+
+.content{
+    min-height: 100%;
+
+    margin-bottom: -10vh;
+}
+
+#push{
+    height: 10vh;
+}
+
+/*
+    Nav Bar
+ */
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 2px;
+    height: 12.5%;
+}
+
+.nav-link{
+    height: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+}
+
+.nav-link *{
+    place-self: center;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.selected{
+    background-color: var(--selectedPrimary);
+}
+
+
+/*
+    Login Screen
+ */
+
+.loginMain{
+    text-align: center;
+    margin: 20vh 35vw;
+}
+
+/*
+    Statistics Screen
+ */
+
+.stats-container {
+    height: 87.5%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "stat-adh stat-adh stat-l7d stat-l7d"
+    ". stat-adt stat-adt .";
+}
+.stat-adh, .stat-adt, .stat-l7d{
+    margin: 15px;
+    background-color: var(--componentBgrd);
+    text-align: center;
+}
+
+.stat-adh {
+    grid-area: stat-adh;
+}
+
+.stat-l7d {
+    grid-area: stat-l7d;
+}
+
+.stat-adt {
+    grid-area: stat-adt;
+}
+
+/*
+    Count Screen
+ */
+.count-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "page-title page-title page-title"
+    "add live-count subtract"
+    "count-specifics count-specifics count-specifics";
+    justify-items: center;
+    height: 87.5%;
+}
+
+.count-page-title {
+    grid-area: page-title;
+    font-size: 2em;
+    align-self: center;
+    justify-self: center;
+}
+
+.live-count {
+    grid-area: live-count;
+    font-size: 5em;
+}
+
+.add { grid-area: add; }
+
+.subtract { grid-area: subtract; }
+
+.count-specifics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "app-check-ins app-check-ins manual-check-ins manual-check-ins";
+    grid-area: count-specifics;
+    column-gap: 3em;
+}
+
+.app-check-ins {
+    grid-area: app-check-ins;
+    font-size: 1.5em;
+    color: var(--primary);
+    justify-self: center;
+}
+
+.manual-check-ins {
+    grid-area: manual-check-ins;
+    font-size: 1.5em;
+    color: var(--warning);
+    justify-self: center;
+}
+
+.count-btn{
+    border: none;
+    background-color: #ffffff;
+    font-size: 5em;
+    height: auto;
+    width: auto;
+}
+
+/*
+    Settings Screen
+ */
+.settings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 2.2fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "settings-title settings-title settings-title"
+    "settings-input settings-input settings-input"
+    ". . settings-btns";
+    height: 87.5%;
+}
+.settings-title {
+    grid-area: settings-title;
+    font-size: 2em;
+    align-self: center;
+    justify-self: center;
+}
+.settings-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "venue-details beacon-passwords venue-times"
+    "venue-details beacon-passwords venue-times";
+    grid-area: settings-input;
+}
+.venue-details, .venue-times, .beacon-passwords{
+    padding: 0 3em;
+}
+
+.venue-details {
+    grid-area: venue-details;
+}
+.beacon-passwords {
+    grid-area: beacon-passwords;
+}
+.venue-times {
+    grid-area: venue-times;
+}
+.settings-btns {
+    grid-area: settings-btns;
+    padding: 2em;
+    justify-self: end;
+}
+.venue-details p, .beacon-passwords p, .venue-times p {
+    margin: 5px;
+}
+#settings-error{
+    font-size: 2em;
+}
+

@@ -1,0 +1,59 @@
+<!doctype html>
+
+<head>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/settings.js"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://kit.fontawesome.com/72b0a7437d.js" crossorigin="anonymous"></script>
+
+    <title>Beacon Settings</title>
+</head>
+
+
+<body>
+    <section class="settings-container">
+        <div class="settings-title">
+            Settings
+        </div>
+        <section class="settings-input">
+            <div class="venue-details">
+                <p>Venue Name:</p>
+                <input id="venue-name" type="text" placeholder="Enter venue name...">
+                <p>Venue Address Line 1:</p>
+                <input id="venue-addr-line-1" type="text" placeholder="Enter address line 1...">
+                <p>Venue Address Line 2:</p>
+                <input id="venue-addr-line-2" type="text">
+                <p>Venue Postcode:</p>
+                <input id="venue-postcode" type="text" placeholder="Enter venue postcode...">
+            </div>
+            <div class="beacon-passwords">
+                <p>New Beacon WiFi Password:</p>
+                <input id="new-wifi-pwd" type="password" placeholder="Enter new Password...">
+                <p>Repeat Beacon WiFi Password:</p>
+                <input id="repeat-wifi-pwd" type="password" placeholder="Repeat new Password...">
+                <p>New Beacon Login Password:</p>
+                <input id="new-beacon-pwd" type="password" placeholder="Enter new Password...">
+                <p>Repeat Beacon Login Password:</p>
+                <input id="repeat-beacon-pwd" type="password" placeholder="Repeat new Password...">
+            </div>
+            <div class="venue-times">
+                <p>Venue Opening Time:</p>
+                <input id="venue-open-time" type="time">
+                <p>Venue Closing Time:</p>
+                <input id="venue-close-time" type="time">
+                <p id="settings-error" class="danger"></p>
+            </div>
+        </section>
+        <div class="settings-btns">
+            <button id="cancel" class="btn btn-info">Cancel</button>
+            <button id="save" class="btn btn-primary">Save</button>
+        </div>
+    </section>
+    <nav class="nav-container">
+        <a class="nav-link" href="/count"><p><i class="fas fa-hashtag"></i> Visitor Count</p></a>
+        <a class="nav-link" href="/stats"><p><i class="fas fa-chart-bar"></i> Visitor Statistics</p></a>
+        <a class="nav-link selected"><p><i class="fas fa-cog"></i> Beacon Settings</p></a>
+    </nav>
+</body>
